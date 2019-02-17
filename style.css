@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+html, body {
+	font-family: 'Montserrat', sans-serif;
+	background-color: #223344;
+	margin: 0;
+
+}
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+p, blockquote {
+	font-size: .9em;
+	line-height: 1.6em;
+	color: #e8e8e8;
+}
+h1 {
+	color: #fff;
+	margin-top: 0;
+	text-align: center;
+}
+.container {
+	text-align: center;
+	padding: .8em 1.2em;
+	margin: 0 auto;
+	width: 80%;
+}
+.RegistrationDialog {
+	background: rgb(134, 130, 141);
+	color: white;
+	padding: 30px 30px;
+	border-radius: 15px;
+	box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, .3);
+}
+.RegistrationDialog button {
+	display: block;
+	margin: 0 auto;
+	padding: 10px;
+	border-radius: 15px;
+	width: 60%;
+	background-color: rgb(122, 178, 196);
+	border-style: solid;
+	border-color: rgb(2, 255, 255);
+	font: inherit;
+	font-weight: 800;
+	color: #000;
+	box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, .3);
+	cursor :pointer;
+}
+.RegistrationDialog button:disabled {
+	background-color: rgba(0, 0, 0,0.8);
+	border-style: none;
+	color: #555;
+	cursor :not-allowed;
+}
+.editInput {
+	display: flex;
+	justify-content: space-between;
+	background-color: rgb(79, 77, 83);
+	padding: 15px;
+	font-size: 100%;
+	font-weight: 600;
+	border-radius: 6px;
+	margin: 8% 30px;
+}
+
+.editInput > input {
+	display: inline-block;
+	background-color: white;
+	margin: 0 auto;
+	padding: 10px 10px;
+	width: 80%;
+	max-width: 200px;
+	border-radius: 6px;
+	border-style: none;
+}
+.editInput > input::placeholder {
+	padding-left: 0px;
+}
+.editInput > label {
+	display: block;
+	margin: 0 auto;
+	padding: 10px 0;
+	text-transform: uppercase;
+	width: 20%;
+}
+
+.spinner {
+	-webkit-animation: rotate 2s linear infinite;
+			animation: rotate 2s linear infinite;
+	z-index: 2;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -25px 0 0 -25px;
+	width: 50px;
+	height: 50px;
+}
+.spinner .path {
+	stroke: #cccccc;
+	stroke-linecap: round;
+	-webkit-animation: dash 1.5s ease-in-out infinite;
+			animation: dash 1.5s ease-in-out infinite;
+}
+  
+@-webkit-keyframes rotate {
+	100% {
+	  -webkit-transform: rotate(360deg);
+			  transform: rotate(360deg);
+}
+}
+  
+  @keyframes rotate {
+	100% {
+	  -webkit-transform: rotate(360deg);
+			  transform: rotate(360deg);
+	}
+  }
+  @-webkit-keyframes dash {
+	0% {
+	  stroke-dasharray: 1, 150;
+	  stroke-dashoffset: 0;
+	}
+	50% {
+	  stroke-dasharray: 90, 150;
+	  stroke-dashoffset: -35;
+	}
+	100% {
+	  stroke-dasharray: 90, 150;
+	  stroke-dashoffset: -124;
+	}
+  }
+  @keyframes dash {
+	0% {
+	  stroke-dasharray: 1, 150;
+	  stroke-dashoffset: 0;
+	}
+	50% {
+	  stroke-dasharray: 90, 150;
+	  stroke-dashoffset: -35;
+	}
+	100% {
+	  stroke-dasharray: 90, 150;
+	  stroke-dashoffset: -124;
+	}
+}
+
+.darken::before {
+	content: ""; 
+	display: block;
+	position: absolute;
+	background-color: rgba(0, 0, 0, .6);
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+
+  
+@media only screen and (max-width: 640px) {
+	.editInput > label {
+		display: none;
+	}
+	.editInput {
+		width: 100%;
+		padding: 5px;
+		margin :0 auto;
+		background-color: inherit;
+	}
+	.container {
+		margin: 5px auto;
+		padding: 5px;
+		width: 95%;
+	}
+	.RegistrationDialog {
+		margin: 5px auto;
+		padding: 20px 0 20px 0;
+	}
+	.RegistrationDialog button {
+		margin-top: 10px;
+	}
+	h1 {
+		font-size: 1.2em
+	}
+}
+

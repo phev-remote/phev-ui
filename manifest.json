@@ -1,0 +1,16 @@
+{
+  "name": "phev-ui",
+  "short_name": "phev-ui",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#223344;",
+  "theme_color": "#223344;",
+  "icons": [
+    {
+      "src": "/assets/icon.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}
