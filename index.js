@@ -19,6 +19,7 @@ export default class App extends Component {
 		super()
 		this.state.spinner = false
 		this.setSpinner = this.setSpinner.bind(this)
+		console.log('test')
 	}
 	setSpinner(on) {
 		this.setState({ spinner :on })
